@@ -55,5 +55,17 @@ const emp = [
 // console.log(Object.values(bankAccount));
 // console.log(Object.entries(bankAccount));
 
-console.log(bankAccount.hasOwnProperty('email'));
-console.log(bankAccount.hasOwnProperty('balance'));
+// console.log(bankAccount.hasOwnProperty('email'));
+// console.log(bankAccount.hasOwnProperty('balance'));
+
+const course = {
+    courseName : "JAVA",
+    coursePrice : 999,
+    courseInstructor : "Rohit Narayani"
+}
+
+const {courseInstructor : instructor,coursePrice:price,courseName:name} = course
+
+console.log(instructor);
+console.log(price);
+console.log(name);
