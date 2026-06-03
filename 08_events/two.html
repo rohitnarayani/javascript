@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello Java</h1>
+
+    <button id="stop">stop</button>
+
+    <script>
+        const callFunc = () => {
+            console.log("Example of setTimeout() method");
+        }
+
+        const changeText = () => {
+            document.querySelector('h1').innerHTML = "I LOVE JAVA";
+        }
+        // setTimeout(callFunc,2000);
+
+        const clearText = setTimeout(changeText,2000);
+
+        document.querySelector('#stop').addEventListener('click',() => {
+            clearTimeout(clearText);
+            console.log("STOPPED");
+        })
+    </script>
+</body>
+</html>
